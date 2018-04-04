@@ -4,12 +4,14 @@ $(document).on 'turbolinks:load', ->
     return false
 
   $('.add_channel_form').on 'submit', (e) ->
+    # retirar espacos em branco do titulo do canal
+    channel_slug = $('#channel_slug').val().replace /\s/g, ''
     $.ajax e.target.action,
         type: 'POST'
         dataType: 'json',
         data: {
           channel: {
-            slug: $('#channel_slug').val()
+            slug: channel_slug
             team_id: $('#channel_team_id').val()
           }
         }

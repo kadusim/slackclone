@@ -2,6 +2,8 @@
 
 Slack clone
 
+![image](public/print.png)
+
 ## Installation
 
 This app runs on a docker container. The following commands are necessary to set up the environment on your machine.
